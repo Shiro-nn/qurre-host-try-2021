@@ -1,0 +1,93 @@
+html{
+    background-color: #0D1117;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    cursor: url(/cursors/green/standart.cur), auto;
+    overflow-x: hidden;
+}
+.q1{
+    background-color: #282e38;
+    border-radius: 10px;
+    margin-top: 75px !important;
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    padding-bottom: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@media (min-width: 576px){
+    .q1{
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+.q2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #3b4452;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+}
+.q3{
+    margin: auto;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin-top: 0;
+    font-family: NeonOL,Karla,sans-serif;
+    color: #f7f7f7;
+    text-align: center;
+}
+.q4{
+    margin: 10px;
+    color: #fff;
+}
+.q5{
+    font-weight: 600;
+    font-size: 22px;
+    margin: 14px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+@media (max-width: 389px){
+    .q5{
+        display: block;
+    }
+}
+.q6{
+    text-align: left;
+}
+.q7{
+    text-align: right;
+}
+.q8{
+    background: rgb(63, 79, 94);
+    color: #62ff32;
+    text-align: center;
+    display: block;
+    border-radius: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 4px 16px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+    transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: url(/cursors/green/pointer.cur), pointer;
+    text-decoration: none;
+}

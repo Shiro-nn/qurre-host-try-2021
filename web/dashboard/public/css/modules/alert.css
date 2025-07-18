@@ -1,0 +1,32 @@
+.alert {
+    z-index: 99;
+    position: fixed;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 5px;
+    width: 50vw !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: 25vw !important;
+    bottom: 5px !important;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-family: Roboto,sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: url(/cursors/green/pointer.cur), pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
+  <head>
+    <%- include('../modules/head') %>
+    <title>Список серверов | Qurre Host</title>
+    <meta property="og:title" content="Список серверов" />
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/products/process.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%- include('../modules/header') %><br>
+    <div class="q1">
+        <div class="q2">
+            <h4 class="q3">Оформить заказ</h4>
+        </div>
+        <div class="q4">
+            <%
+            let data_center = 'EKACOD';
+            let activation = 'Автоматическая';
+            if(host.dc == 2){
+                data_center = 'DataPro Moscow I';
+                activation = 'Ручная'
+            }
+            let name_text = "";
+            if(host.class == 'low'){name_text = 'Слабый';}
+            else if(host.class == 'average'){name_text = 'Средний';}
+            else if(host.class == 'good'){name_text = 'Хороший';}
+            else if(host.class == 'high'){name_text = 'Мощный';}%>
+            <div class="q5"><span class="q6">Дата-центр</span><br><span class="q7"><%=data_center%></span></div>
+            <div class="q5"><span class="q6">Тип</span><br><span class="q7"><%=name_text%></span></div>
+            <div class="q5"><span class="q6">Озу</span><br><span class="q7"><%=host.ram%></span></div>
+            <div class="q5"><span class="q6">Цп</span><br><span class="q7"><%=host.cpu%></span></div>
+            <!--<div class="q5"><span class="q6">Активация</span><br><span class="q7"><%=activation%></span></div>-->
+            <div class="q5"><span class="q6">Стоимость</span><br><span class="q7"><%=pay.sum%>₽</span></div>
+            <a target="_blank" href="<%=process.pay_link%>" class="q8">Оплатить</a>
+        </div>
+    </div>
+    <script src="/js/all.js"></script>
+    <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+    <script src="/js/fixes.js"></script>
+    <%- include('../modules/invite') %>
+  </body>
+</html>

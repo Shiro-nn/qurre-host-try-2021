@@ -1,0 +1,23 @@
+{
+  "name": "qurre_host_install",
+  "version": "1.0.0",
+  "description": "",
+  "main": "qurre.js",
+  "bin": "qurre.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/**/*"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "node-tmux": "^1.0.2",
+    "nodejs-file-downloader": "^4.7.2",
+    "steamcmd-interface": "^3.0.0"
+  }
+}

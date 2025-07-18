@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
+  <head>
+    <%- include('../modules/head') %>
+    <title>Список серверов | Qurre Host</title>
+    <meta property="og:title" content="Список серверов" />
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/products/buy.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%- include('../modules/header') %><br>
+    <div class="q4">
+        <div class="q5">
+            <h4 class="q6">Купить сервер</h4>
+        </div>
+        <h2 class="q8">Дата-центр</h2>
+        <div class="q1">
+            <div class="q9 dc1">
+                <span class="q7">EKB EKACOD</span>
+                <hr class="q10">
+            </div>
+            <div class="q9 dc2">
+                <span class="q7">Moscow M9</span>
+                <hr class="q10">
+            </div>
+        </div>
+        <h2 class="q8" id="dc2">Центральный процессор</h2>
+        <div class="q1" id="dc2">
+            <div class="q9 cpu1">
+                <span class="q7">Ryzen 7 5800X</span>
+                <hr class="q10">
+            </div>
+            <div class="q9 cpu2">
+                <span class="q7">i9 10900k</span>
+                <hr class="q10">
+            </div>
+        </div>
+        <h2 class="q8">Характеристики</h2>
+        <%let lastdc = 0;let lastmcp = 0;
+        hosts.forEach((host) => {
+            if(lastdc != host.dc){
+                let subcls = '';
+                if(host.dc == 1){subcls = 'class="q1" ';}
+                if(lastdc != 0){ %></div><% } %>
+                <div <%-subcls%>id="dc<%=host.dc%>"><%
+            }
+            lastdc = host.dc;
+            if(host.mcp != undefined && host.mcp != null){
+                if(lastmcp != host.mcp){
+                    if(lastmcp != 0){ %></div><% } %>
+                    <div class="q1" id="cpu<%=host.mcp%>"><%
+                }
+                lastmcp = host.mcp;
+            }
+            let name_text = "";
+            if(host.class == 'low'){name_text = 'Слабый';}
+            else if(host.class == 'average'){name_text = 'Средний';}
+            else if(host.class == 'good'){name_text = 'Хороший';}
+            else if(host.class == 'high'){name_text = 'Мощный';}%>
+            <div class="q2 <%=host.class%>" id="buy-<%=host.id%>">
+                <span class="q7"><%=name_text%></span>
+                <hr class="q3">
+                <span class="q7"><%=host.cpu%></span><br>
+                <span class="q7"><%=host.ram%></span>
+                <hr class="q3">
+                <span class="q7"><%=host.sum%>₽/мес</span>
+                <hr class="q10">
+            </div>
+        <%})%>
+        </div></div>
+        <h2 class="q8">Название</h2>
+        <div class="q12">
+            <input type="text" class="q11" placeholder="Название вашего сервера" maxlength="20" minlength="4">
+        </div>
+        <div class="q12">
+            <button class="q13">Приобрести</button>
+        </div>
+        <div class="q12">
+            <span class="q14"></span>
+        </div>
+    </div>
+    <script src="/js/all.js"></script>
+    <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+    <script src="/js/products/buy.js"></script>
+    <script src="/js/fixes.js"></script>
+    <%- include('../modules/invite') %>
+  </body>
+</html>

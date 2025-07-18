@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
+    <head>
+        <%- include('../modules/head') %>
+        <title>Восстановление пароля | Qurre Host</title>
+        <meta property="og:title" content="Восстановление пароля" />
+    
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/authorization/reset.css">
+        <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="reset">
+            <div class="wrap">
+                <div class="user">
+                    <div class="logo">
+                        <span>Q</span>
+                    </div>
+                    <div class="form-wrap">
+                    	<div class="tabs-content">
+                    		<div id="login-tab-content" class="active">
+                                <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Новый пароль">
+                                <input type="submit" id="reset_password" class="button" value="Изменить">
+                    		</div>
+                    	</div>
+                        <span class="mssg"></span>
+                	</div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/all.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+        <script src="/js/authorization/reset.js"></script>
+        <script src="/js/fixes.js"></script>
+        <%- include('../modules/invite') %>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
+    <head>
+        <%- include('../modules/head') %>
+        <title>Авторизация | Qurre Host</title>
+        <meta property="og:title" content="Авторизация" />
+    
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/authorization/authorization.css">
+        <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="login">
+            <div class="wrap">
+                <div id="toggle-wrap">
+                    <div id="toggle-terms">
+                        <div id="cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recovery">
+                    <h2>Восстановление пароля</h2>
+                    <p><span>Введите адрес электронной почты.</span></p>
+                    <p><span>На вашу почту будет отправлено письмо с ссылкой для восстановления пароля.</span></p>
+                    <form class="recovery-form" action="" method="post">
+                        <input type="text" class="input" id="user_recover" placeholder="Введите Email">
+                        <input type="submit" class="button" value="Отправить">
+                    </form>
+                    <p class="mssg">Вам было отправлено электронное письмо с дальнейшими инструкциями.</p>
+                </div>
+                <div class="content">
+                    <div class="logo">
+                        <span>Q</span>
+                    </div>
+                    <div id="slideshow">
+                        <div>
+                            <h2><span>Qurre</span></h2>
+                            <p><span id="iferrortext">Зарегистрируйтесь,<br>чтобы купить хост</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="form-wrap">
+                    	<div class="tabs">
+                            <h3 class="login-tab"><a class="log-in active" href="#login-tab-content"><span>Авторизация<span></a></h3>
+                    		<h3 class="signup-tab"><a class="sign-up" href="#signup-tab-content"><span>Регистрация</span></a></h3>
+                    	</div>
+                    	<div class="tabs-content">
+                    		<div id="login-tab-content" class="active">
+                    			<div class="login-form">
+                    				<input type="text" class="input" id="user_login" autocomplete="off" placeholder="Логин" maxlength="25">
+                    				<input type="password" class="input" id="user_pass_login" autocomplete="off" placeholder="Пароль">
+                    				<input type="checkbox" class="checkbox" checked id="remember_me">
+                    				<label for="remember_me">Запомнить меня</label>
+                    				<input type="submit" id="login_submit" class="button" value="Войти">
+                    			</div>
+                    			<div class="help-action">
+                    				<p><i class="fa fa-arrow-left" aria-hidden="true"></i><a class="forgot" href="#">Забыли пароль?</a></p>
+                    			</div>
+                    		</div>
+                    		<div id="signup-tab-content">
+                    			<div class="signup-form">
+                    				<input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
+                    				<input type="text" class="input" id="user_name" autocomplete="off" placeholder="Логин" maxlength="25">
+                    				<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Пароль">
+                    				<input type="submit" id="signup_submit" class="button" value="Зарегистрироваться">
+                                </div>
+                    		</div>
+                    	</div>
+                	</div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/all.js"></script>
+        <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+        <script src="/js/authorization/authorization.js"></script>
+        <script src="/js/fixes.js"></script>
+        <%- include('../modules/invite') %>
+    </body>
+</html>

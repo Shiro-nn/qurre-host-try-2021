@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
+  <head>
+    <%- include('../modules/head') %>
+    <title>Список серверов | Qurre Host</title>
+    <meta property="og:title" content="Список серверов" />
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/products/list.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%- include('../modules/header') %><br>
+    <div class="q6">
+        <div class="q7">
+            <h4 class="q8">Ваши сервера</h4>
+            <a class="q9" href="/products/buy">Купить новый</a>
+        </div>
+        <div class="q1">
+            <div class="q2">
+                <div class="q3">
+                <% servers.forEach(function(server) { %>
+                    <div class="q4">
+                        <div class="q5">
+                            <div class="q21">
+                                <div class="q22">
+                                    <p class="q23"><%=server.name%></p>
+                                </div>
+                                <div class="q24">
+                                    <a class="q25" href="/products/<%=server.id%>">Перейти</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/all.js"></script>
+    <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+    <script src="/js/products/list.js"></script>
+    <script src="/js/fixes.js"></script>
+    <%- include('../modules/invite') %>
+  </body>
+</html>

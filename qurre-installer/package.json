@@ -1,0 +1,27 @@
+{
+  "name": "qurre-installer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "Qurre.js",
+  "bin": "Qurre.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/**/*"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "appdata-path": "^1.0.0",
+    "cli-progress": "^3.9.1",
+    "colors": "^1.4.0",
+    "fs": "^0.0.1-security",
+    "nodejs-file-downloader": "^4.8.1",
+    "path": "^0.12.7",
+    "tar": "^6.1.11",
+    "unzipper": "^0.10.11"
+  }
+}

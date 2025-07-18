@@ -1,0 +1,19 @@
+::-webkit-scrollbar{
+width: 9px;
+}
+::-webkit-scrollbar-thumb{
+background-color: rgb(0, 155, 0);
+border-radius: 99px;
+}
+::-webkit-scrollbar-track{
+background-color: #18191c;
+}
+::-moz-selection{ 
+color: rgb(0, 155, 0);
+background: #00000040;
+border-radius: 15px;
+}
+::selection{
+color: rgb(0, 155, 0);
+background: #00000040;
+}

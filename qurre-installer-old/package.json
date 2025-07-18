@@ -1,0 +1,27 @@
+{
+  "name": "qurre-installer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "qurre.js",
+  "bin": "qurre.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/**/*"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "appdata-path": "^1.0.0",
+    "axios": "^0.21.1",
+    "cli-progress": "^3.9.1",
+    "colors": "^1.4.0",
+    "node-pty": "^0.10.1",
+    "node-tmux": "^1.0.2",
+    "nodejs-file-downloader": "^4.7.2",
+    "steamcmd-interface": "^3.0.0"
+  }
+}

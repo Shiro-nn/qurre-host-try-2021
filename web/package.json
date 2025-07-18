@@ -1,0 +1,25 @@
+{
+  "name": "qurre_host",
+  "version": "1.0.0",
+  "description": "",
+  "main": "qurre.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "discord-webhook-node": "^1.1.8",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "ipinfo": "^1.5.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.13.5",
+    "passport": "^0.4.1",
+    "qurre-pay": "^1.1.0",
+    "socket.io-client": "^4.2.0",
+    "vhost": "^3.0.2"
+  }
+}

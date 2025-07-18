@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
+  <head>
+    <%- include('./modules/head') %>
+    <title>Qurre Host</title>
+    <meta property="og:title" content="Qurre Host" />
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="<%= cdn_host %>/scpsl.store/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%- include('./modules/header') %>
+    <div id="mainall">
+        <section id="main">
+            <div class="about">
+                <h1 class="heading">Qurre</h1>
+                <p id="text1">Платежная система<br>с удобным API и<br>умеренным количеством<br>способов оплаты.</p>
+                <a class="btn" onclick="document.location = '/shops'">Подключить</a>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="mod one">
+                <div style="margin-top: 80px;">
+                    <h1 class="heading fs120">API</h1>
+                    <p class="desc">Удобное API.</p>
+                </div>
+            </div>
+            <div class="mod two"><div class="row img-title-top"></div></div>
+            <div class="mod four">
+                <div style="margin-top: 80px;">
+                    <h1 class="heading fs100">Способы оплаты</h1>
+                    <p class="desc">Оплата через Qiwi, YooMoney, карту или телефон.</p>
+                </div>
+            </div>
+            <div class="mod three"><div class="row img-title-top"></div></div>
+            <div class="mod five">
+                <div style="margin-top: 80px;">
+                    <h1 class="heading fs120">Статистика</h1>
+                    <p class="desc">Узнайте время, когда ваши клиенты оплачивают ваши услуги или какой способ оплаты предпочитают.</i></p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <script src="/js/all.js"></script>
+    <script src="<%= cdn_host %>/scpsl.store/js/jquery/jquery.min.js"></script>
+    <script src="/js/fixes.js"></script>
+    <%- include('./modules/invite') %>
+  </body>
+</html>
